@@ -87,14 +87,5 @@ function! s:parse_symbol(sym) abort
 endfunction
 
 function! s:abbreviate(kind)
-  let kind_map = {
-        \ 'Variable': '∙',
-        \ 'Class': '∑',
-        \ 'Property': '∘',
-        \ 'Constructor': '∗',
-        \ 'Method': 'ƒ',
-        \ 'Function': 'ƒ',
-        \}
-
-  return get(kind_map, a:kind, '?')
+  return get(g:coc_fzf_kind_labels, tolower(a:kind), a:kind)
 endfunction

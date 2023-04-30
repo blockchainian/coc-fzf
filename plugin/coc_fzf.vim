@@ -8,6 +8,10 @@ else
   let g:loaded_coc_fzf = 'yes'
 endif
 
+if !exists("g:coc_fzf_kind_labels")
+    let g:coc_fzf_kind_labels = {}
+endif
+
 if !exists("g:coc_fzf_preview_toggle_key")
     let g:coc_fzf_preview_toggle_key = '?'
 endif
